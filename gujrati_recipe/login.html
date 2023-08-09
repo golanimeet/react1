@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body bgcolor="#ffffee">
+<body bgcolor="#eeffee">
+    <form action="success.html" method="post">
     <table border="0" width="100%" >
         <tr>
             <td><img src="imag/recipe_logo.png" width="6%" ><font size="5%" color="brown"> <b>ગુજરાતી રેસીપી</b></font></td>
@@ -19,32 +20,42 @@
     </table >
 
     <hr>
-    <table bgcolor="#eeffee" width="100%" >
-        
+    <table border="0"  width="100%" >
         <tr>
-            <td align="center">
-                <img src="imag/recipe_logo.png" width="8%" >
-            </td>
-        </tr>
-        <tr>
-            <td>
+            <td colspan="2">
                 <h2 align="center"> About</h2>
             </td>
         </tr>
         <tr>
-            <td align="center">
-               <h3>Follow On</h3>
+            <td colspan="2" align="center">
+                <img src="imag/recipe_logo.png" width="6%" >
             </td>
         </tr>
-        <tr>
-            <td colspan="2" align="center">
+        
+        <tr align="center">
+            <td width="50%">
+               <h3>Follow On<br/></h3>
+            </td>
+            <td><h3>નવી રેસિપી માટે કૉમેન્ટ કરો...</h3></td>
+        </tr>
+        <tr align="center">
+            <td>
              <a href="https://twitter.com/"><img src="imag/twitter.png" width="50px"/></a>   
               <a href="https://www.youtube.com/"> <img src="imag/youtube.png" width="50px"/></a>
-              <a href="https://in.pinterest.com/"><img src="imag/pinterest.png" width="50px"></a>
-              <a href="https://www.facebook.com/"><img src="imag/facebook .png" width="50px"></a>
+              <a href="https://in.pinterest.com/"><img src="imag/pinterest.png" width="50px"/></a>
+              <a href="https://www.facebook.com/"><img src="imag/facebook .png" width="50px"/></a>
             </td>
+            <td>
+                <input type="text" name="name" size="30px" placeholder="Enter Your Name" required/><br/>
+                <input type="email" name="email" size="30px" placeholder="Enter Your Email" required/><br/>
+                <input type="text" name="recipe" size="30px" placeholder="Enter Recipe Name" required/><br/>
+               <input type="button" value="Submit"/>
+               <input type="reset" value="Clear All"/>
+           </td>
+ 
         </tr>
     </table>
+</form>
     <hr>
 </body>
 </html>
