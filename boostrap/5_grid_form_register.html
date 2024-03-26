@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .container 
+        {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row offset-2">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header text-bg-success">
+                        <h1>Register</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-4">
+                                    <label for="surname" class="form-label">Surname</label>
+                                    <input type="text" name="surname" id="surname" class="form-control" required />
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" required />
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label for="fathername" class="form-label">Fathername</label>
+                                    <input type="text" name="fathername" id="fathername" class="form-control"
+                                        required />
+                                </div>
+
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-5">
+                                    <b>Gender</b>
+                                    <div class="form-check form-check-inline    ">
+                                        <input type="radio" name="gender" id="male" value="1"
+                                            class="form-check-input" />
+                                        <label for="male" class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline    ">
+                                        <input type="radio" name="gender" id="female" value="0"
+                                            class="form-check-input" />
+                                        <label for="female" class="form-check-label">Female</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <b>language</b>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="gujarati" id="gujarati" class="form-check-input"
+                                            value="1" />
+                                        <label for="gujarati" class="form-check-label">Gujarati</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="hindi" id="hindi" class="form-check-input"
+                                            value="2" />
+                                        <label for="hindi" class="form-check-label">Hindi</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="english" id="english" class="form-check-input"
+                                            value="3" />
+                                        <label for="english" class="form-check-label">English</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="country">Country</label>
+                                    <select class="form-select" name="country" id="country">
+                                        <option value="">Select country</option>
+                                        <option value="India">India</option>
+                                        <option value="China">China</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Philippines">Philippines</option>
+                                        <option value="Singapore">Singapore</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="state">State</label>
+                                    <select class="form-select" name="state" id="state">
+                                        <option value="">Select State</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>state
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="city">City</label>
+                                    <select class="form-select" name="city" id="city">
+                                        <option value="">Select City</option>
+                                        <option value="Ahmedabad">Ahmedabad</option>
+                                        <option value="Surat">Surat</option>
+                                        <option value="Vadodara">Vadodara</option>
+                                        <option value="Rajkot">Rajkot</option>
+                                        <option value="Bhavnagar">Bhavnagar</option>
+                                        <option value="Jamnagar">Jamnagar</option>
+                                        <option value="Junagadh">Junagadh</option>
+                                        <option value="Gandhinagar">Gandhinagar</option>
+                                        <option value="Anand">Anand</option>
+                                        <option value="Bharuch">Bharuch</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label for="pincode" class="form-label">Pincode</label>
+                                    <input type="number" name="pincode" id="pincode" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12  col-md-4">
+                                    <label for="photo" class="form-label">Select Photo</label>
+                                    <input class="form-control" type="file" id="photo" accept="image/*" />
+                                </div>
+                                <div class="col-12  col-md-4">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea name="address" id="address" cols="30" class="form-control"></textarea>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <button class="btn btn-success btn-lg w-100 mt-4">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

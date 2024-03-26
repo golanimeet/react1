@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: inline-block;
+            width: 100px;
+            background-color: yellow;
+            color:red;
+            font-size: xx-large;
+            border:1px solid black;
+            padding:50px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="box" id="one" onclick="return BoxButton(id);">
+    </div>
+
+    <!-- <script src="common.js"></script> -->
+    
+    <script>
+        let $ = (id) => document.getElementById(id);
+    var box = 0;
+    let BoxButton = (id) => {
+        box = box + 1;
+        $(id).innerHTML = box;
+    }
+</script>
+</body>
+</html>

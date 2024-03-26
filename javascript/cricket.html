@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>run calculator</title>
+</head>
+
+<body> 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-3 shadow">
+                    <div class="card-header fs-4 fw-bold text-bg-warning text-center shadow">
+                        Enter runs as the player
+                    </div>
+                    <div class="card-body">
+                        <form action="" onsubmit="return saveRuns();">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="player" class="form-label">Select player 1 :</label>
+                                    <select class="form-select" aria-label="Default select example" id="player">
+                                        <option value="#">Select Player Name</option>
+                                        <option value="Virat Kohli">Virat Kohli</option>
+                                        <option value="Rohit Sharma">Rohit Sharma</option>
+                                        <option value="Suryakumar Yadav">Suryakumar Yadav</option>
+                                        <option value="Shubhman Gill">Shubhman Gill</option>
+                                        <option value="KL Rahul">KL Rahul</option>
+                                        <option value="Ravindra Jadeja">Ravindra Jadeja</option>
+                                        <option value="Tilak Varma">Tilak Varma</option>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <label for="ball" class="form-label">Select ball :</label>
+                                    <select class="form-select" aria-label="Default select example" id="ball">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="run" class="form-label">Enter runs :</label>
+                                    <input type="text" class="form-control" id="run" placeholder="Enter runs"
+                                        required />
+                                </div>
+                                <div class="col mt-4">
+                                    <input type="submit" value="Add" class="btn btn-warning w-100">
+                                </div>
+                            </div>
+                        </form>
+
+                        <form action="" onsubmit="return saveRuns2();">
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <label for="player" class="form-label">Select player 2 :</label>
+                                    <select class="form-select" aria-label="Default select example" id="player2">
+                                        <option value="#">Select Player Name</option>
+                                        <option value="Virat Kohli">Virat Kohli</option>
+                                        <option value="Rohit Sharma">Rohit Sharma</option>
+                                        <option value="Suryakumar Yadav">Suryakumar Yadav</option>
+                                        <option value="Shubhman Gill">Shubhman Gill</option>
+                                        <option value="KL Rahul">KL Rahul</option>
+                                        <option value="Ravindra Jadeja">Ravindra Jadeja</option>
+                                        <option value="Tilak Varma">Tilak Varma</option>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <label for="ball" class="form-label">Select ball :</label>
+                                    <select class="form-select" aria-label="Default select example" id="ball2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="run" class="form-label">Enter runs :</label>
+                                    <input type="text" class="form-control" id="run2" placeholder="Enter runs"
+                                        required />
+                                </div>
+                                <div class="col mt-4">
+                                    <input type="submit" value="Add" class="btn btn-warning w-100">
+                                </div>
+                            </div>
+                        </form>
+
+                        <table class="table table-bordered mt-4">
+
+                            <thead>
+                                <tr>
+                                    <td class="text-bg-secondary fw-bold">Player Name</td>
+                                    <td class="text-bg-secondary fw-bold">Previous Ball played</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td id="d_name" class="col-4"></td>
+                                    <td id="d_run" class="col-8"></td>
+                                </tr>
+                                <tr>
+                                    <td id="d_name2" class="col-4"></td>
+                                    <td id="d_run2" class="col-8"></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                        <h1 class="fs-5 fw-bold mt-4">Run Details</h1>
+
+                        <div class="card">
+                            <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label id="p_name"></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Runs : <span id="p_run"></span></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Balls : <span id="p_ball"></span></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Strike rate : <span id="strike"></span></label>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <label id="p_name2"></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Runs : <span id="p_run2"></span></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Balls : <span id="p_ball2"></span></label>
+                                        </div>
+                                        <div class="col">
+                                            <label>Strike rate : <span id="strike2"></span></label>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="common.js"></script>
+
+    <script>
+
+        var totalrun = '';
+        var totalball = '';
+        var totalrun2 = '';
+        var totalball2 = '';
+        var beforename = '';
+
+        class playerRun {
+            constructor(name, ball, run) {
+                this.run = run;
+                this.ball = ball;
+                this.name = name;
+            }
+            addRow() {
+                let p_name = $("p_name");
+                let p_run = $("p_run");
+                let p_ball = $("p_ball");
+                let strike = $("strike");
+                let d_name = $("d_name");
+                let d_run = $("d_run");
+
+                totalrun += this.run;
+                totalball += 1;
+                totalrun = parseInt(totalrun);
+                totalball = parseInt(totalball);
+                console.log(this.name, totalrun, totalball, this.strikrate);
+
+                if (this.name != beforename) {
+                    d_run.innerHTML = '';
+                    totalrun = this.run;
+                    totalball = 1;
+                }
+
+                p_name.innerHTML = this.name;
+                p_run.innerHTML = totalrun;
+                p_ball.innerHTML = totalball;
+                this.strikrate = ((totalrun / totalball) * 100).toFixed(2);
+                strike.innerHTML = this.strikrate;
+                d_name.innerHTML = this.name;
+                d_run.innerHTML += `<span class="text-bg-danger px-2 py-1 rounded-circle mx-1">${this.run}</span>`;
+
+                beforename = this.name;
+            }
+
+        }
+
+        class playerRun2 {
+            constructor(name2, ball2, run2) {
+                this.run2 = run2;
+                this.ball2 = ball2;
+                this.name2 = name2;
+            }
+
+            addRow2() {
+                let p_name2 = $("p_name2");
+                let p_run2 = $("p_run2");
+                let p_ball2 = $("p_ball2");
+                let strike2 = $("strike2");
+                let d_name2 = $("d_name2");
+                let d_run2 = $("d_run2");
+
+                totalrun2 += this.run2;
+                totalball2 += 1;
+                totalrun2 = parseInt(totalrun2);
+                totalball2 = parseInt(totalball2);
+
+                console.log(this.name2, totalrun2, totalball2, this.strikrate2);
+
+                if (this.name2 != beforename) {
+                    d_run2.innerHTML = '';
+                    totalrun2 = this.run2;
+                    totalball2 = 1;
+                }
+
+                p_name2.innerHTML = this.name2;
+                p_run2.innerHTML = totalrun2;
+                p_ball2.innerHTML = totalball2;
+                this.strikrate2 = ((totalrun2 / totalball2) * 100).toFixed(2);
+                strike2.innerHTML = this.strikrate2;
+                d_name2.innerHTML = this.name2;
+                d_run2.innerHTML += `<span class="text-bg-danger px-2 py-1 rounded-circle mx-1">${this.run2}</span>`;
+
+                beforename = this.name2;
+
+            }
+        }
+
+        let saveRuns = function () {
+            let name = $('player').value;
+            let ball = parseInt($('ball').value);
+            let run = parseInt($('run').value);
+            // console.log(name, ball, run);
+            let pr = new playerRun(name, ball, run);
+            pr.addRow();
+            $('run').value = '';
+            return false;
+        }
+
+        let saveRuns2 = function () {
+            let name2 = $('player2').value;
+            let ball2 = parseInt($('ball2').value);
+            let run2 = parseInt($('run2').value);
+            // console.log(name, ball, run);
+            let pr2 = new playerRun2(name2, ball2, run2);
+            pr2.addRow2();
+            $('run2').value = '';
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>

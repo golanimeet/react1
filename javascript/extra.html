@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">HTML table generator</h1>
+    <table border="2" align="center" width="95%" cellpadding="5">
+        <tr>
+            <td width="30%">
+                <form id="loopForm" action="lesson8.html" method="post" 
+                onsubmit="return GeneratTable();"> 
+                    <label for="rowCount">Enter the number of rows:</label><br/>
+                    <input type="number" id="row" name="rowCount" required>
+                    <br><br>
+                    <label for="colCount">Enter the number of columns:</label><br><br>
+                    <input type="number" id="column" name="colCount" required>
+                    <br><br>
+                    <label>Select a loop type:</label><br>
+                    
+                    <input type="radio" id="whileLoop" name="loopType" value="while" required>
+                    <label for="whileLoop">While Loop</label><br>
+                    
+                    <input type="radio" id="forLoop" name="loopType" value="for" required>
+                    <label for="forLoop">For Loop</label><br>
+                    
+                    <input type="radio" id="doWhileLoop" name="loopType" value="do-while" required>
+                    <label for="doWhileLoop">Do-While Loop</label><br><br>
+                    <input type="submit" value="Generate table">
+                </form>
+            </td>
+            <td>
+                <table id="output" border="2" align="center" width="100%" cellpadding="10">
+                   
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function GeneratTable()
+        {
+            //alert("form submitted");
+            let row = document.getElementById("row").value;
+            let column = document.getElementById("column").value;
+            let loop = document.querySelector("input[name='loopType']:checked").value;
+            let output = document.getElementById("output");
+            output.innerHTML = '';
+            if(loop == "while")
+            {
+                // alert("create html table using while loop");
+                let i=1;
+                while(i<=row) //outer while loop
+                {
+                    output.innerHTML+=`<tr>`;
+                    let j=1;
+                    let temp='';
+                    while(j<=column) //inner while loop
+                    {
+                        temp+=`<td>${j}</td>`;
+                        j++;
+                    }
+                    output.innerHTML+=temp;
+                    i++;    
+                }
+            }
+            else if(loop == "for")
+            {
+               for(let i=1;i<=row;i++) 
+               {
+                output.innerHTML+=`<tr>`; 
+                let temp='';
+                for(j=1;j<=column;j++)
+                {
+                    temp+=`<td>${j}</td>`; 
+                }
+                output.innerHTML+= temp;
+               }
+            }
+            else
+            {
+                alert("create html table using do while");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

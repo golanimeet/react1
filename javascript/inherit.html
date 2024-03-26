@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hierarchical Example</h1>
+    <hr/>
+    <h2 id="output"></h2>
+    <script>
+        class MyMath
+        {
+            getPi()
+            {
+                return 3.14;
+            }
+            getSquare(number){
+                return number * number;
+            }
+        }
+        class Circle extends MyMath
+        {
+            constructor(radius)
+            {
+                super(); //compulsory
+                this.radius = radius;
+                console.log("Circle class constructor is called....");
+            }
+            getArea()
+            {
+                //local variable 
+                let area = super.getPi() * super.getSquare(this.radius);
+                return area;
+            }
+        }
+        class Cyliender extends MyMath
+        {
+            constructor(radius,height)
+            {
+                super(); //compulsory
+                this.radius = radius;
+                this.height = height;
+                console.log("Cyliender class constructor is called....");
+            }
+            getVolume()
+            {
+                let volume = super.getPi() * super.getSquare(this.radius) * this.height;
+                return volume;
+            }
+        }
+        let radius = parseInt(prompt("Enter radius...."));
+        let height = parseInt(prompt("Enter height...."));
+        //create cyliender class object
+        var c1 = new Cyliender(radius,height);
+        var volume = c1.getVolume().toFixed(2);
+        document.getElementById("output").innerHTML = "volume of cyliender is " + volume;
+
+        //create circle class object
+        var c2 = new Circle(radius);
+        var area = c2.getArea().toFixed(2);
+        document.getElementById("output").innerHTML += "<br/> area of circle is " + area;
+    </script> 
+</body>
+</html>

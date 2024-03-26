@@ -1,0 +1,36 @@
+<!-- FILEPATH: /C:/frontend21/javascript/lesson13.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Volume Calculator</title>
+    </head>
+    <body>
+        <h1>Volume Calculator</h1>
+        <table>
+            <tr>
+                <td>Length:</td>
+                <td><input type="number" id="length"></td>
+            </tr>
+            <tr>
+                <td>Width:</td>
+                <td><input type="number" id="width"></td>
+            </tr>
+            <tr>
+                <td>Height:</td>
+                <td><input type="number" id="height"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="calculateVolume()">Calculate Volume</button></td>
+            </tr>
+        </table>
+        <p id="result"></p>
+    </body>
+    <script src="common.js"></script>
+   <script>
+        var height = document.getElementById("height"); 
+        var width = document.getElementById("width");       
+        var length =  document.getElementById("length");    
+        var result = document.getElementById("result");
+   </script>
+</html>

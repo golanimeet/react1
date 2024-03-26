@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0p;
+}
+
+.meet{
+    margin-top: 8%;
+}
+.yoganumber h4{
+    display: inline-block;
+    text-decoration: none;
+}
+.yoganumber{
+    text-align: center;
+}
+
+.card img{
+    border-radius: 20px;
+}
+.card:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.556);
+}
+
+.card-body p,
+.card-body h4{
+    display: inline-block;
+    text-decoration: none;
+}
+.tirth a{
+    text-decoration: none;
+}
+.app img:hover{
+    transform: scale(1.2);
+}
+.yashubhai{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+  .yashubhai:hover{
+    box-shadow: 0 0 20px 0px black;
+  }
+  .golani {
+    width: 300px;
+    text-align: center;
+  }
+  .shadow1 {
+    box-shadow: 0 0 20px 0px black;
+    width: 95%;
+  }
