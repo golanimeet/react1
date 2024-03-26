@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">New input type in html </h1> <hr/>
+    <form action="success.html" method="post" enctype="multipart/form-data" autocomplete="on">
+        <label for="fullname">Fullname</label>
+        <input type="text" name="fullname" id="fullname" placeholder="surname name fathername" required autofocus /> <br/><br/>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="password" required /><br/><br/>
+
+        <label for="dob">Birth Date</label>
+        <input type="date" name="dob" id="dob" required max="2023-07-29" min="2020-01-01" /><br/><br/>
+
+        <label for="btime">Birth Time</label>
+        <input type="time" name="btime" id="btime"  required /><br/><br/>
+
+        <label for="photo">Select photo</label>
+        <input type="file" name="photo" id="photo" accept="image/*" required multiple /> <br/><br/>
+
+        <label for="pincode">Pincode</label>
+        <input type="number" name="pincode" id="pincode" placeholder="Pincode" required /> <br/><br/>
+
+        <label for="mobile">Mobile</label>
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobile No" required /> <br/><br/>
+
+        <label for="favcolor">Select your favourite color</label>
+        <input type="color" name="favcolor" id="favcolor" required /> <br/><br/>
+
+        <label for="website">your website name</label>
+        <input type="url" name="website" id="website" placeholder="your website name" required /> <br/><br/>
+
+        <button type="submit">Submit your form</button>
+        <button type="reset">clear all</button>
+    </form>
+</body>
+</html>
